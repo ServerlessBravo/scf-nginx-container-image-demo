@@ -1,10 +1,19 @@
 # scf-nginx-container-image-demo
 Demo for nginx container image
 
+## Build Container Image
+
+```bash
+docker build -t scf_nginx:latest .
+docker tag scf_nginx:latest xxx.tencentcloudcr.com/chris_demo/scf_nginx:latest
+docker push xxx.tencentcloudcr.com/chris_demo/scf_nginx:latest
+```
+
+
 ## SCF Configuration
 
 ```bash
-镜像	xxx.tencentcloudcr.com/chris_demo/scf_nginx:1.0
+镜像	xxx.tencentcloudcr.com/chris_demo/scf_nginx:latest
 镜像URL	xxx.tencentcloudcr.com/chris_demo/scf_nginx@sha256:ee48d89f4812880a7ddc216a53ec0297c59cd0ab6bc756533f222221cf2d4d52
 ENTRYPOINT	
 CMD
